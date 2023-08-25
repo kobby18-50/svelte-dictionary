@@ -17,12 +17,7 @@ module.exports = {
 				main : '#d5173c'
 			},
 
-			screens : {
-				sm: '270px',
-				md: '768px',
-				lg: '976px',
-				xl: '1440px'
-			  },
+			
 		},
 	},
 	plugins: [

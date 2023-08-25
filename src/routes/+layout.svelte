@@ -11,4 +11,6 @@
 
 <Navbar/>
 
-<slot />
+<div class="">
+	<slot />
+</div>

@@ -79,7 +79,7 @@
 			<h1 class="h2 mb-8">Audio</h1>
 
 			<!-- audio one -->
-			<div class="grid lg:grid-cols-4 gap-7 lg:mx-0 sm:mx-20" >
+			<div class="grid lg:grid-cols-4 sm:grid-cols-2 sm:gap-5 gap-7 lg:mx-0 " >
 				<div>
 					{#if meaning[0].phonetics[0].audio}
 						<audio controls src={meaning[0].phonetics[0].audio} />
@@ -262,7 +262,7 @@
 
 		<!-- audio -->
 		<h1 class="h2 mb-8">Audio</h1>
-		<div class="grid lg:grid-cols-4 gap-7 sm:mx-20 lg:mx-0">
+		<div class="grid lg:grid-cols-4 sm:grid-cols-2 sm:gap-5 gap-7  lg:mx-0">
 
 			<!-- audio 1 -->
 			<div>
