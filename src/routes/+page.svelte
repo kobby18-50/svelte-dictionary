@@ -52,7 +52,7 @@
 			/>
 
 			<div class="flex justify-center mt-5">
-				<button type="submit" class="btn variant-filled-primary btn-xl">Search</button>
+				<button type="submit" class="btn variant-filled-primary md:btn-xl">Search</button>
 			</div>
 		</form>
 	</div>
