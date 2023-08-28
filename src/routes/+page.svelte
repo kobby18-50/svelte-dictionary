@@ -1,7 +1,6 @@
 <script>
 	import { error } from '@sveltejs/kit';
 	import axios from 'axios';
-	import { onMount } from 'svelte';
 	import toast, { Toaster} from 'svelte-french-toast'
 	
 
@@ -29,7 +28,7 @@
 				errormsg = err.response.data.message
 				resolution = err.response.data.resolution
 
-				toast.error('err')
+				toast.error(errormsg)
 
 				throw error(404, 'Not found word')
 
@@ -40,7 +39,7 @@
 </script>
 
 
-
+<Toaster/>
 <main class="text-base md:mx-20 mt-5 mx-10">
 	<div class="">
 		<form on:submit={handleSearch}>
@@ -57,17 +56,6 @@
 			</div>
 		</form>
 	</div>
-
-	{#if errormsg.length}
-
-	<h1 class='text-warning-800'>{errormsg}</h1>
-
-	{/if}
-	
-
-		
-
-
 
 	<!-- data -->
 
