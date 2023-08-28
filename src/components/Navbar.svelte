@@ -6,15 +6,14 @@
 </script>
 
 
-<nav class="flex justify-between lg:mx-40 sm:mx-10 mt-10">
-    <figure>
-        <img src={LOGO} alt="book" class="h-20" />
-    </figure>
-
-
+<div class="flex justify-between mx-10 mt-5">
     <div>
-        <LightSwitch/>
+        <figure>
+            <img src={LOGO} alt="book" class="h-20" />
+        </figure>
     </div>
 
-   
-</nav>
+    <div class="mt-3">
+       <LightSwitch/>
+    </div>
+</div>

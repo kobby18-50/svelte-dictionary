@@ -36,11 +36,11 @@
 
 
 
-<main class="lg:mx-40 sm:mx-14 text-xl">
-	<div class="">
+<main class="text-base">
+	<div class="mx-10">
 		<form on:submit={handleSearch}>
 			<input
-				class="input variant-form-material mt-5 w-full text-xl"
+				class="input variant-form-material mt-5 text-xl"
 				type="search"
 				placeholder="Enter word to search"
 				required
@@ -66,7 +66,11 @@
 
 	<!-- data -->
 
-	<div class="">
+</main>
+
+
+<main class="mx-10">
+	<div >
 		<h2 class="font-bold text-7xl">{meaning[0].word}</h2>
 
 		{#if meaning[0].phonetic}
@@ -164,10 +168,10 @@
 							{#if definitions.synonyms.length != 0}
 							<h1 class="">Synonyms</h1>
 
-							<div class="flex space-x-5">
+							<div class="flex flex-wrap space-x-5">
 								{#each definitions.synonyms as synonyms }
 								<div class="">
-									<span class="font-bold text-main overflow-x-auto">{synonyms}</span>
+									<span class="font-bold text-main  overflow-x-auto">{synonyms}</span>
 
 								</div>
 							{/each}
@@ -222,7 +226,7 @@
 				<h1 class="h1">Antonyms</h1>
 
 				<div>
-					<span class="flex space-x-5 overflow-x-auto">
+					<span class="flex space-x-5 overflow-x-auto flex-wrap">
 					{#each speech.antonyms as antonyms}
 						
 							<p class="font-bold text-main">
@@ -238,7 +242,7 @@
 				<!-- end of main antonyms -->
 
 				<!-- url src -->
-				<div class="flex space-x-5 my-5">
+				<div class="flex space-x-5 my-5 flex-wrap">
 					<h1>sources</h1>
 					<a href={meaning[0].sourceUrls} class="font-semibold underline">{meaning[0].sourceUrls}</a>
 				</div>
@@ -416,6 +420,7 @@
 	{/if}
 
 	<!-- second meaning end -->
+
 
 
 </main>
