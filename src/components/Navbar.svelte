@@ -6,7 +6,7 @@
 </script>
 
 
-<div class="flex justify-between mx-10 mt-5">
+<div class="flex justify-between mx-10 mt-5 md:mx-20">
     <div>
         <figure>
             <img src={LOGO} alt="book" class="h-20" />

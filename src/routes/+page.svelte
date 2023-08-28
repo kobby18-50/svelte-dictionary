@@ -11,13 +11,18 @@
 	let resolution = ''
 	export let data;
 	let meaning = data.meaning;
+	let isLoading = data.isLoading
+
+	console.log(isLoading)
 
 	const handleSearch = async () => {
 		console.log(wordValue);
 		await axios
 			.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordValue}`)
 			.then((res) => {
+				isLoading = true
 				meaning = res.data;
+				isLoading = false
 			})
 			.catch((err) => {
 				errortitle = err.response.data.title
@@ -36,8 +41,8 @@
 
 
 
-<main class="text-base">
-	<div class="mx-10">
+<main class="text-base md:mx-20 mt-5 mx-10">
+	<div class="">
 		<form on:submit={handleSearch}>
 			<input
 				class="input variant-form-material mt-5 text-xl"
@@ -69,7 +74,11 @@
 </main>
 
 
-<main class="mx-10">
+{#if isLoading }
+<div class="placeholder" />
+
+{:else}
+<main class="mx-10 md:mx-20">
 	<div >
 		<h2 class="font-bold text-7xl">{meaning[0].word}</h2>
 
@@ -424,3 +433,4 @@
 
 
 </main>
+{/if}
